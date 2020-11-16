@@ -149,24 +149,6 @@ export default {
   },
 
   methods: {
-    /* Esse método bem mais simples também funcionou.
-
-    adicionarAoCarrinho: function (filme) {
-      if (filme.estoqueDisponivel > 0) {
-        let indexFilme = this.carrinho.findIndex((obj) => obj.id == filme.id);
-        filme.quantidade = (filme.quantidade || 0) + 1;
-
-        if (indexFilme == -1) {
-          filme.preço = `R$${filme.valor},00`;
-          this.carrinho.push(filme);
-        } else {
-          this.carrinho.splice(indexFilme, 1, filme);
-        }
-
-        filme.estoqueDisponivel -= 1;
-      }
-    },*/
-
     adicionarAoCarrinho: function (filme) {
       let carrinho_local = this.carrinho
       
@@ -186,6 +168,24 @@ export default {
         filme.estoqueDisponivel -= 1;
       }
     },
+
+    /* Esse método bem mais simples também funcionou.
+
+    adicionarAoCarrinho: function (filme) {
+      if (filme.estoqueDisponivel > 0) {
+        let indexFilme = this.carrinho.findIndex((obj) => obj.id == filme.id);
+        filme.quantidade = (filme.quantidade || 0) + 1;
+
+        if (indexFilme == -1) {
+          filme.preço = `R$${filme.valor},00`;
+          this.carrinho.push(filme);
+        } else {
+          this.carrinho.splice(indexFilme, 1, filme);
+        }
+
+        filme.estoqueDisponivel -= 1;
+      }
+    },*/
   },
 };
 </script>
